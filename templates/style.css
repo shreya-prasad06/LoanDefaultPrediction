@@ -1,0 +1,37 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+@import url(https://w3schools.com/w3css/4/w3.css);
+
+html { width: 100%; height:100%; overflow:hidden; }
+
+body {
+ background-image: url("loana.jpg");
+ background-size: contain;
+  background-repeat: no-repeat;
+ background-position: left;
+ background-blend-mode: hard-light;
+ font-family: Arial, Helvetica, sans-serif;
+box-sizing: border-box;
+}
+.login { 
+	position: absolute;
+	top: 40%;
+	left: 50%;
+	margin: -150px 0 0 -150px;
+	width:400px;
+	height:400px;
+}
+header{
+image-rendering: url("b.gif");
+width:1500px;
+height:600px;
+}
+.login h1 { color: #fff; text-shadow: 0 0 10px rgba(0,0,0,0.3); letter-spacing:1px; text-align:center; }
+
+input{
+  width: 50%;
+  padding: 5px;
+  margin: 5px 0 2px 0;
+  display: inline-block;
+  border: none;
+  background: ##FFE4C4;
+}

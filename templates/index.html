@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<title>Loan Eligibility Test</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style>
+  input{
+    width: 50%;
+    padding: 5px;
+    margin: 5px 0 2px 0;
+    display: inline-block;
+    border: none;
+    background: #FFA07A;
+    }
+  body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box;}
+</style>
+<body background="loana.jpg">
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar w3-white w3-padding w3-card">
+    <a href="#home" class="w3-bar-item w3-button"><b>RSS</b> Bank</a>
+    <!-- Float links to the right. Hide them on small screens -->
+    <div class="w3-right w3-hide-small">
+      <a href="#test" class="w3-bar-item w3-button">Test</a>
+    </div>
+  </div>
+</div>
+<br>
+<br>
+<!-- Page content -->
+<div class="w3-content w3-padding" style="max-width:1564px">
+  <!-- testSection -->
+  <div class="w3-container w3-padding-16" id="test">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+    <link href="bootstrap-form-validation.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/0.11.9/validator.min.js"></script>
+
+    <section class="footer-form padding-top-xl padding-bottom-xl" aria-label="Contact Form">
+      <div class="wrapper">
+        <div class="container">
+          <div class="row">
+            <div class="col-xs-12 section5 text-center">
+              <h2 class="h1 font-w400">Build Your Next Banking Experience</h2>
+               <hr class="w3-border-grey" style="margin:auto;width:80%"><br>
+              <p class="margin-top-m margin-bottom-m">Create without limits. RSS puts the power back in your hands – so you can build apply for loans with total hassle free system. No more running to the bank to get your loans approved. RSS lets you know how eligibile you are to apply for a loan with going to a bank.</p>
+            </div>
+          </div>          
+        </div>
+      </div>
+    </section>
+  </div> 
+  <form action="{{ url_for('predict')}}"method="post"><center>
+    <br><b>Loan Amount: </b><input type='number' name="amt" placeholder="Enter your Loan Amount"required="required">
+    <br><br><b>Funded Amount: </b><input type="number" name="fundedamt" placeholder="Enter your Funded Amount" required="required" >
+    <br><br><b>Funded Amount invested: </b><input type="number" name="funded_amnt_inv" placeholder="Enter Funded Amount invested"required="required">
+    <br><br><b>Term: </b><input type='number' name="Term" placeholder="Enter your Term" required="required">
+    <br><br><b>Interest Rate: </b><input type='number' name="int_rate" placeholder="Enter your Interest Rate" required="required">
+    <br><br><b>Home Ownership: </b><input type='number' name="home_ownership "  placeholder="Enter 0:mortage 1:own 2:OTHER" required="required">
+    <br><br><b>Annual Income: </b><input type='number' name="annualincome" placeholder="Enter your Annual Income" required="required">
+    <br><br><b>Purpose: </b><input type='number' name="purpose" placeholder="Enter 0:credit card 1:debt_consolidation 2:homeimprovement 3:other" required="required">
+    <br><br><b>Total Payment: </b><input type='number' name="total_pymnt" placeholder="Enter Total Payment" required="required">
+     <br><br><b>Total recieved principal: </b><input type='number' name="total_rec_prncp" placeholder="Enter Total recieved principal" required="required">
+      <br><br><b>Total recieved interest : </b><input type='number' name="total_rec_int" placeholder="Enter Total recieved interest" required="required">
+    <br><br><button type="submit" >Submit</button></center>
+  </form>
+  <div><center>{{ prediction_text }}</center></div> 
+<!-- End page content -->
+</div>
+<!-- Footer -->
+<footer class="w3-container w3-padding-32 w3-light-grey w3-center">
+  <p>Powered by Roshani, Shreya and Sara</p>
+</footer>
+
+</body>
+</html>
